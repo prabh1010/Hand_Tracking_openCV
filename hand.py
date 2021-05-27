@@ -4,7 +4,7 @@ import time
 
 
 class handDetector():
-    def __init__(self, mode=False, maxHands=2, detectCon=0.5, trackCon=0.5):
+    def __init__(self, mode=False, maxHands=2, detectCon=0.5, trackCon=0.5):   #maxhands can be changed according to requirements
         self.mode = mode
         self.maxHands = maxHands
         self.detectCon = detectCon
@@ -34,9 +34,9 @@ class handDetector():
                 h, w, c = img.shape
                 cx, cy = int(lm.x * w), int(lm.y * h)  # positon of center , multiplying with the value to find pixel location
 
-                lmList.append([id, cx, cy])
+                lmList.append([id, cx, cy])          #each position getting stored in list
                 if draw and id == 4:                                      #for the 4th point i.e the tip of thumb
-                    cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
+                    cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)     #drawing circles on the ID mentioned (4)
         return lmList
 
 
