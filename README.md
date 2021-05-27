@@ -1,4 +1,4 @@
-# Hand_Tracking_o
+# Hand_Tracking_openCV
 
 Turning on webcam to track the location of the point (id) on the hand
 
